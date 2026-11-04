@@ -1,0 +1,13 @@
+---
+- name: Download cowsay
+  hosts: medded
+  become: true
+  tasks:
+    - name: Add EPEL repo
+      ansible.builtin.dnf:
+        name: epel-release
+        state: present
+    - name: Install cowsay
+      ansible.builtin.dnf:
+        name: cowsay
+        state: present
