@@ -5,3 +5,4 @@
 
 ---
 - import_playbook: playbooks/cowsay.yml
+- import_playbook: playbooks/users.yml

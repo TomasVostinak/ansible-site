@@ -1,0 +1,16 @@
+---
+- name: Manage user and keys
+  hosts: medded
+  become: true
+  tasks:
+  - name: Ensure user exists
+    ansible.builtin.user:
+      name: "{{ user_name }}"
+      state: present
+  - name: Configure authorized SSH keys
+    ansible.posix.authorized_key:
+      user: "{{ user_name }}"
+      key: "{{ user_ssh_keys | join('\n') }}"
+      state: present
+      exclusive: true
+

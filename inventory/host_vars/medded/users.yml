@@ -1,0 +1,6 @@
+---
+user_name: demonic
+
+user_ssh_keys:
+  - "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPezVxzvQoNWYz74OonR8tD2dnQY4NcKs/IeBNA73js8 a0306-to-medded"
+  - "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDN38VkeHUY8RdHhNubqz2oUnmr69kym5l86VShjXAZN inter@LAPTOP-M1BPNQRS"
