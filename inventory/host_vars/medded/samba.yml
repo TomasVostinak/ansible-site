@@ -1,0 +1,29 @@
+---
+samba_user: smbuser
+samba_group: smbgroup
+
+samba_allowed_networks:
+  - "147.230.72.0/21"
+  - "2001:718:1c01:72::/64"
+
+samba_workgroup: WORKGROUP
+samba_server_string: "Samba Server"
+
+samba_shares:
+  - name: data
+    path: /srv/samba/data
+    comment: "Sdilena datova slozka"
+    browseable: "yes"
+    read_only: "no"
+    guest_ok: "no"
+    create_mask: "0660"
+    directory_mask: "2770"
+
+  - name: public
+    path: /srv/samba/public
+    comment: "Verejna slozka pro prihlasene uzivatele"
+    browseable: "yes"
+    read_only: "yes"
+    guest_ok: "no"
+    create_mask: "0644"
+    directory_mask: "0755"
